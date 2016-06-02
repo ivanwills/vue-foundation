@@ -1,9 +1,9 @@
-# ractive-foundation
-[![Build Status](https://travis-ci.org/ractive-foundation/ractive-foundation.svg?branch=master)](https://travis-ci.org/ractive-foundation/ractive-foundation)
-[![Code Quality](https://www.codacy.com/project/badge/abe39910d64144fc9219964f3652dbda)](https://www.codacy.com/app/pv-shum/ractive-foundation)
-[![bitHound Score](https://www.bithound.io/github/ractive-foundation/ractive-foundation/badges/score.svg)](https://www.bithound.io/github/ractive-foundation/ractive-foundation/master)
-[![Dependencies Status](https://david-dm.org/tractive-foundatio/ractive-foundation.svg)](https://david-dm.org/ractive-foundation/ractive-foundation)
-[![Join the chat at https://gitter.im/themacclesoft/ractive-foundation](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/themacclesoft/ractive-foundation?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+# vue
+[![Build Status](https://travis-ci.org/ractive-foundation/vue-foundation.svg?branch=master)](https://travis-ci.org/ractive-foundation/vue-foundation)
+[![Code Quality](https://www.codacy.com/project/badge/abe39910d64144fc9219964f3652dbda)](https://www.codacy.com/app/pv-shum/vue-foundation)
+[![bitHound Score](https://www.bithound.io/github/ractive-foundation/vue-foundation/badges/score.svg)](https://www.bithound.io/github/ractive-foundation/vue-foundation/master)
+[![Dependencies Status](https://david-dm.org/tractive-foundatio/vue-foundation.svg)](https://david-dm.org/ractive-foundation/vue-foundation)
+[![Join the chat at https://gitter.im/themacclesoft/vue-foundation](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/themacclesoft/vue-foundation?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## Overview
 
@@ -27,18 +27,18 @@ End goal is to build up a library of reusable components for Foundation v5.
 Install the package via npm, all dependencies will be in the `dist` folder.
 
 ```shell
-$ npm install ractive-foundation --save
+$ npm install vue-foundation --save
 ```
 
 Or download and add the dependencies. (again all dependencies will be in the `dist` folder)
 
 ```html
-<script src='ractive.js'></script>
+<script src='vue.js'></script>
 <script src='hammer.min.js'></script>
 <script src='lodash-compat.js'></script>
-<script src='ractive-touch.js'></script>
-<script src='ractive-events-tap.umd.js'></script>
-<script src='ractivef.js'></script>
+<script src='vue-touch.js'></script>
+<script src='vue-events-tap.umd.js'></script>
+<script src='vuef.js'></script>
 ```
 
 
@@ -66,7 +66,7 @@ Use `gulp wing --name ux-blah` to create a new `ux-blah` folder (and files) in `
 
 ```bash
 $ gulp wing --name ux-blah
-[07:22:07] Using gulpfile ~/dev/projects/ractive-foundation/Gulpfile.js
+[07:22:07] Using gulpfile ~/dev/projects/vue-foundation/Gulpfile.js
 [07:22:07] Starting 'wing'...
 [07:22:07] Finished 'wing' after 1.16 ms
 ```
@@ -107,7 +107,7 @@ is basically the same as:
 
 ## Accessibility (a11y)
 
-ractive-foundation uses [a11y](http://addyosmani.github.io/a11y/) with gulp for automated accessibility testing.
+vue-foundation uses [a11y](http://addyosmani.github.io/a11y/) with gulp for automated accessibility testing.
 
 Example uses:
 
@@ -133,7 +133,7 @@ Example usage (failure):
 
 ```
 $ gulp a11y-only -c ux-button -u BuyNow
-[17:59:54] Using gulpfile ~/dev/projects/ractive-foundation/gulpfile.js
+[17:59:54] Using gulpfile ~/dev/projects/vue-foundation/gulpfile.js
 [17:59:54] Starting 'a11y-connect'...
 [17:59:55] Finished 'a11y-connect' after 139 ms
 [17:59:55] Starting 'a11y-only'...

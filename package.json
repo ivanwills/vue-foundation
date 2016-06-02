@@ -1,8 +1,8 @@
 {
-  "name": "ractive-foundation",
+  "name": "vue-foundation",
   "version": "0.17.2",
-  "description": "Ractive components for Foundation 5",
-  "main": "dist/ractivef.js",
+  "description": "Vuejs components for Foundation 5",
+  "main": "dist/vuef.js",
   "scripts": {
     "test": "npm prune && npm install && gulp test",
     "start": "npm prune && npm install && gulp",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ractive-foundation/ractive-foundation.git"
+    "url": "https://github.com/ractive-foundation/vue-foundation.git"
   },
   "author": "Pavel Shum <pv.shum@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ractive-foundation/ractive-foundation/issues"
+    "url": "https://github.com/ractive-foundation/vue-foundation/issues"
   },
-  "homepage": "https://github.com/ractive-foundation/ractive-foundation",
+  "homepage": "https://github.com/ractive-foundation/vue-foundation",
   "devDependencies": {
     "del": "~1.1.1",
     "foundation-sites": "git+https://github.com/zurb/bower-foundation.git#5.5.3",

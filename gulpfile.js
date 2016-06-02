@@ -33,9 +33,9 @@ var gulp = require('gulp'),
 
 	pkg = require('./package.json');
 
-const DEV_SERVER_PORT = 9080,
-	TEST_SERVER_PORT = 8088,
-	A11Y_SERVER_PORT = 8089;
+const DEV_SERVER_PORT = 7080,
+	TEST_SERVER_PORT = 7088,
+	A11Y_SERVER_PORT = 7089;
 
 gulp.task('connect', function () {
 	plugins.connect.server({
@@ -197,8 +197,8 @@ gulp.task('ractive-build-plugins', function () {
 
 gulp.task('build-documentation-components', function () {
 
-	var headerHtml = fs.readFileSync('./src/header.html'),
-		footerHtml = fs.readFileSync('./src/footer.html');
+	var headerHtml = fs.readFileSync('./src/templates/header.html'),
+		footerHtml = fs.readFileSync('./src/templates/footer.html');
 
 	return mergeStream(
 
@@ -210,11 +210,11 @@ gulp.task('build-documentation-components', function () {
 		.pipe(renderDocumentation({
 			type: 'components',
 			componentsDir: './src/components/',
-			docSrcPath: './src/component-page.html',
-			indexSrcPath: './src/components.html',
+			docSrcPath: './src/templates/component-page.html',
+			indexSrcPath: './src/templates/components.html',
 			partials: [
-				'./src/component.html',
-				'./src/component-use-case.html'
+				'./src/templates/component.html',
+				'./src/templates/component-use-case.html'
 			]
 		}))
 		.pipe(plugins.header(headerHtml, { pkg: pkg }))
@@ -232,7 +232,7 @@ gulp.task('build-documentation-components', function () {
 			.pipe(gulp.dest('./public/')),
 
 		// Test runner while we're at it.
-		gulp.src('./src/testRunner.html')
+		gulp.src('./src/templates/testRunner.html')
 			.pipe(gulp.dest('./public/'))
 
 	);
@@ -241,8 +241,8 @@ gulp.task('build-documentation-components', function () {
 
 gulp.task('build-documentation-plugins', function () {
 
-	var headerHtml = fs.readFileSync('./src/header.html'),
-		footerHtml = fs.readFileSync('./src/footer.html');
+	var headerHtml = fs.readFileSync('./src/templates/header.html'),
+		footerHtml = fs.readFileSync('./src/templates/footer.html');
 
 	return mergeStream(
 
@@ -254,11 +254,11 @@ gulp.task('build-documentation-plugins', function () {
 		.pipe(renderDocumentation({
 			type: 'plugins',
 			componentsDir: './src/plugins/',
-			docSrcPath: './src/plugin-page.html',
-			indexSrcPath: './src/plugins.html',
+			docSrcPath: './src/templates/plugin-page.html',
+			indexSrcPath: './src/templates/plugins.html',
 			partials: [
-				'./src/plugin.html',
-				'./src/plugin-use-case.html'
+				'./src/templates/plugin.html',
+				'./src/templates/plugin-use-case.html'
 			]
 		}))
 		.pipe(plugins.header(headerHtml, { pkg: pkg }))
@@ -371,7 +371,7 @@ gulp.task('version-check', function (callback) {
 gulp.task('watch', function () {
 	var self = this;
 	plugins.watch([
-		'src/*.html',
+		'src/templates/*.html',
 		'src/pages/*.html',
 		'src/blank-pages/*.html',
 		'src/**/*.json',

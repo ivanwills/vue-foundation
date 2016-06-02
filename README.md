@@ -1,4 +1,4 @@
-# vue
+# vue-foundation
 [![Build Status](https://travis-ci.org/ractive-foundation/vue-foundation.svg?branch=master)](https://travis-ci.org/ractive-foundation/vue-foundation)
 [![Code Quality](https://www.codacy.com/project/badge/abe39910d64144fc9219964f3652dbda)](https://www.codacy.com/app/pv-shum/vue-foundation)
 [![bitHound Score](https://www.bithound.io/github/ractive-foundation/vue-foundation/badges/score.svg)](https://www.bithound.io/github/ractive-foundation/vue-foundation/master)

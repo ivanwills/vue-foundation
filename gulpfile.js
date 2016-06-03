@@ -83,7 +83,8 @@ gulp.task('copy-vendors', function () {
 			'./node_modules/page/page.js',
 			'./node_modules/foundation-sites/js/vendor/modernizr.js',
 			'./node_modules/lodash-compat/index.js',
-			'./node_modules/hljs-cdn-release/build/highlight.min.js'
+			'./node_modules/hljs-cdn-release/build/highlight.min.js',
+			'./node_modules/vue/dist/vue*.js',
 		])
 		.pipe(plugins.copy('./public/js', { prefix: 1 })),
 
@@ -371,6 +372,7 @@ gulp.task('version-check', function (callback) {
 gulp.task('watch', function () {
 	var self = this;
 	plugins.watch([
+		'gulpfile.js',
 		'src/templates/*.html',
 		'src/pages/*.html',
 		'src/blank-pages/*.html',
